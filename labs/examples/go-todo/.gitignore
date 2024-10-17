@@ -1,0 +1,17 @@
+# Editors
+.*.sw[op]
+*~
+/.idea/
+\#*
+.\#*
+*TODO*
+
+## Artifacts
+*.sqlite
+coverage.out
+coverage.html
+/build
+/dist
+/data
+todo-app
+*-report.json

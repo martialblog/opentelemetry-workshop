@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Create{% endblock %}
+
+{% block content %}
+
+<div id="list" class="pure-u-1">
+  <h1 class="item-new">New Item</h1>
+
+  <div class="item-item pure-g">
+    <form class="pure-form" method="POST">
+      <label for="title">Title</label>
+      <input type="text" name="title" placeholder="Message title" value="{{ request.form['title'] }}" class="pure-input-1" required=""></input>
+      <label for="description">Description</label>
+      <input type="text" name="description" placeholder="Description" value="{{ request.form['content'] }}" class="pure-input-1"></input>
+      <fieldset class="pure-group">
+        <button type="submit" class="pure-button pure-input-1-2 button-primary">Submit</button>
+      </fieldset>
+    </form>
+  </div>
+
+</div>
+
+{% endblock %}

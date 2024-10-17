@@ -1,0 +1,10 @@
+{{define "content"}}
+{{range .}}
+  <div class="item-item pure-g">
+    <div class="pure-u-3-4">
+      <h3 class="item-subject"><a class="item-item-link" href="/todo/{{ .ID }}">{{ .Title }}</a></h4>
+      <p class="item-desc">{{ .Description }}</p>
+    </div>
+  </div>
+{{end}}
+{{end}}

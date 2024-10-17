@@ -1,0 +1,49 @@
+---
+services:
+  collector:
+    image: docker.io/otel/opentelemetry-collector-contrib:0.111.0
+    command: ["--config=/etc/otel-collector-config.yml"]
+    ports:
+      - "4317:4317"
+      - "4318:4318"
+    volumes:
+      - "./collector-config.yml:/etc/otel-collector-config.yml"
+
+  jaeger:
+    image: docker.io/jaegertracing/all-in-one:latest
+    ports:
+      - "16686:16686"
+
+  prometheus:
+    image: docker.io/prom/prometheus:v3.0.0-beta.0
+    volumes:
+      - './prometheus.yml:/etc/prometheus/prometheus.yml'
+    command: ["--enable-feature=otlp-write-receiver", "--config.file=/etc/prometheus/prometheus.yml"]
+    ports:
+      - "9090:9090"
+
+  mimir:
+    image: grafana/mimir:2.13.0
+    volumes:
+      - ./mimir.yml:/etc/mimir-config/mimir.yaml
+    entrypoint:
+      - /bin/mimir
+      - -config.file=/etc/mimir-config/mimir.yaml
+    ports:
+      - "9009:9009"
+
+  loki:
+    image: docker.io/grafana/loki:3.1.1
+    command: ["-config.file=/etc/loki/loki.yml"]
+    volumes:
+      - './loki.yml:/etc/loki/loki.yml'
+
+  grafana:
+    image: docker.io/grafana/grafana:latest
+    environment:
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./datasources.yml:/etc/grafana/provisioning/datasources/datasources.yaml

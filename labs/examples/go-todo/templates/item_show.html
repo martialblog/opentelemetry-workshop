@@ -1,0 +1,17 @@
+{{define "content"}}
+<div id="list" class="pure-u-1">
+  <div class="item-item pure-g">
+    <div class="pure-u-3-4">
+      <h3 class="item-subject">{{ .Title }}</h3>
+      <div class="item-control">
+        <form class="pure-form" method="POST" action="/todo/delete/{{ .ID }}">
+          <input type="submit" name="done" value="Done" class="pure-button button-secondary item-edit-control">
+        </form>
+      </div>
+      <div class="item-desc">
+        <p>{{ .Description }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{{end}}

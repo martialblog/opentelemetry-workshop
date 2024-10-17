@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}List{% endblock %}
+
+{% block content %}
+
+{% for item in items %}
+  <div class="item-item pure-g">
+    <div class="pure-u-3-4">
+      <h3 class="item-subject"><a class="item-item-link" href="/todo/{{ item['id'] }}">{{ item['title'] }}</a></h4>
+      <p class="item-desc">{{ item['description'] }}</p>
+    </div>
+  </div>
+{% endfor %}
+
+{% endblock %}
