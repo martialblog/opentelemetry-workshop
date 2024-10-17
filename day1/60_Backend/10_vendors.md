@@ -2,8 +2,12 @@
 
 # OpenTelemetry Consumers
 
-There are many solutions that consume OTLP natively.
+There are many solutions that consume OTLP natively. Some are open source some are not.
 
-Some are Open Source some are not: https://opentelemetry.io/ecosystem/vendors/
+<center><img src="../../_images/OTelOverview.png" alt="Overview" width="65%"/></center>
+
+How data is stored, aggregated, visualized and other features depend on the vendor:
+
+https://opentelemetry.io/ecosystem/vendors/
 
 See: Lab 5.1
