@@ -34,16 +34,22 @@ See: https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main
 
 # Distributions
 
-For various reasons the existing distributions provided by the OpenTelemetry project may not meet your needs. Whether you want a smaller version, or have the need to implement custom functionality like authenticator extensions, receivers, processors, exporters or connectors.
+The OpenTelemetry project provides a compiled distribution of the collector.
 
-The tool used to build distributions ocb (OpenTelemetry Collector Builder) is available to build your own distributions.
+But you easily build your own with the build distributions ocb tool (OpenTelemetry Collector Builder).
+
+When you need custom functionality like authenticator extensions, receivers, processors, exporters or connectors.
+
+https://opentelemetry.io/docs/collector/distributions/
 
 !SLIDE
 
 # OTLP
 
-The OpenTelemetry Protocol (OTLP) specification describes the encoding, transport, and delivery mechanism of telemetry data between telemetry sources, intermediate nodes such as collectors and telemetry backends.
+The OpenTelemetry Protocol (OTLP) defines the encoding of telemetry data and the protocol used to exchange data between the client and the server.
 
-This specification defines how OTLP is implemented over gRPC and HTTP
+This specification defines how OTLP is implemented over gRPC and HTTP.
+
+More and more vendors offer data ingestion via OTLP natively.
 
 See: https://opentelemetry.io/docs/specs/otlp/
