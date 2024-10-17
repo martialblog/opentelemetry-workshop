@@ -12,9 +12,11 @@ It also supports processing and filtering telemetry data before it gets exported
 
 # When to use the collector
 
-For most language specific instrumentation libraries you have exporters for popular backends and OTLP. You might wonder.
+For most language specific instrumentation libraries you have exporters for popular backends and OTLP. Why use another tool?
 
-However, the Collector allows your service to offload data quickly and the collector can take care of additional handling like retries, batching, encryption or even sensitive data filtering.
+The Collector allows the service to offload data quickly and the collector can take care of the rest.
+
+Handling retries, batching, encryption or even sensitive data filtering.
 
 !SLIDE
 
