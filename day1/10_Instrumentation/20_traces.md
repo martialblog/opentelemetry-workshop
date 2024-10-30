@@ -52,15 +52,16 @@ A span represents a unit of work or operation. Spans are the building blocks of 
 
 # Span Events
 
-A Span Event can be thought of as a structured log message (or annotation) on a Span, typically used to denote a meaningful, singular point in time during the Span’s duration.
+Events are like structured log message (or annotation) on a Span,
+typically used to denote a singular point in time during the Span's duration.
 
-For example, consider two scenarios in a web browser:
+For example, consider two scenarios in a browser:
 
-    Tracking a page load
-    Denoting when a page becomes interactive
+1. Tracking a page load
+2. Denoting when a page becomes interactive
 
-A Span is best used to the first scenario because it’s an operation with a start and an end.
+The first scenario has a clear start and end, thus a Span.
 
-A Span Event is best used to track the second scenario because it represents a meaningful, singular point in time.
+The second is a singular point in time, thus a Span Event.
 
 See: Lab 2.2 and Lab 2.3

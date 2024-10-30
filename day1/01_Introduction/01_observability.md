@@ -18,7 +18,7 @@ The data generally comes in the form of traces, metrics, and logs.
 
 # Metrics
 
-Metrics are numerical values that can be used to determine a service or component’s behavior. Examples:
+Metrics are numerical values that can be used to determine a service or component's behavior. Examples:
 
     @@@Sh
     service_open_connections
