@@ -18,17 +18,7 @@ Usually one receiver is configured to send received data to one pipeline.
               parse_from: attributes.time
               layout: '%Y-%m-%d %H:%M:%S'
 
-~~~SECTION:handouts~~~
-
 See: https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver
-
-* https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver/hostmetricsreceiver
-* https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver/filelogreceiver
-* https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver/mysqlreceiver
-* https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver/nginxreceiver
-* https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver/syslogreceiver
-
-~~~ENDSECTION~~~
 
 !SLIDE
 
