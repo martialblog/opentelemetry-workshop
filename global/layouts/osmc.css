@@ -125,7 +125,7 @@
   .content .net-header + h1:not(.section-title) {
     margin: 0;
     color: white;
-    background: #a011f0;
+    background: #08066b;
   }
 
   .net-footer {
@@ -133,7 +133,7 @@
     bottom: 0;
     width: 100%;
     color: white;
-    background: #a011f0;
+    background: #08066b;
   }
 
   .net-footer * {
@@ -179,7 +179,7 @@
   .subsectionnonum .net-header + h1:not(.section-title) {
     width: 13.6em; /* Without this explicit slide max-width wkhtmltopdf is unable to produce proper line breaks */
     color: white;
-    background: #a011f0;
+    background: #08066b;
   }
 
   .net-footer {
@@ -214,8 +214,8 @@
     margin: 1em 0;
     padding: .25em;
     font-size: 1.5em;
-    color: black;
-    background: #a011f0;
+    color: white;
+    background: #08066b;
   }
 
   .title-author p {
@@ -238,7 +238,7 @@
     padding: 1em;
     height: 26em;
     color: white;
-    background: #a011f0;
+    background: #08066b;
   }
 
   .title-name {
@@ -325,7 +325,7 @@
   }
 
   a, a:visited {
-    color: #a011f0;
+    color: #08066b;
     text-decoration: none;
   }
 
@@ -500,7 +500,7 @@
   }
 
   a, a:visited {
-    color: #a011f0;
+    color: #08066b;
     text-decoration: none;
   }
 

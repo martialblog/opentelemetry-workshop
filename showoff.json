@@ -9,7 +9,7 @@
   "user": "netways",
   "password": "awesome",
   "templates" : {
-       "default"   : "global/layouts/netways.tpl"
+       "default"   : "global/layouts/osmc.tpl"
   },
   "sections": [
     {"section": "global/pre/netways/title"},

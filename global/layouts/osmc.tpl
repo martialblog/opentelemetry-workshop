@@ -1,5 +1,5 @@
 <div class="net-header">
-    <img src="/global/pre/osmc/_images/OSMC_logo_500x217.png" alt="OSMC" width="231px" height="100px">
+    <img src="/global/pre/osmc/_images/OSMC_Icon_Qualle_blue.png" alt="OSMC">
 </div>
 
 ~~~CONTENT~~~
