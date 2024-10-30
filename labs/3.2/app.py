@@ -42,3 +42,8 @@ def roll_dice():
     result = roll(dice)
     logging.info('end rolling')
     return Response(f"{result}\n", status=200)
+
+# curl "localhost:5000/roll?dice=1d20"
+# curl "localhost:5000/roll?dice=2d4"
+if __name__ == '__main__':
+    app.run(debug=True)

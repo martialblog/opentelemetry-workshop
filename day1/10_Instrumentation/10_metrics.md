@@ -38,7 +38,7 @@ See: Lab 1.1 and Lab 1.2
 These are invoked together with operations they are measuring.
 
 * `Counter`, supports non-negative increments
-* `UpDownCounter`, supports increments and decrements.
+* `UpDownCounter`, supports increments and decrements
 * `Histogram` can be used to report arbitrary values that are likely to be statistically meaningful
 
 See: Lab 1.3

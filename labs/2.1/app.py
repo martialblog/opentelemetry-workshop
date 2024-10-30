@@ -9,7 +9,7 @@ from opentelemetry.sdk.trace.export import (
     ConsoleSpanExporter,
 )
 
-resource = Resource.create({"service.name": "mytrace"})
+resource = Resource.create({'service.name': 'mytrace'})
 
 trace.set_tracer_provider(TracerProvider(resource=resource))
 
@@ -19,8 +19,13 @@ trace.get_tracer_provider().add_span_processor(
 
 tracer = trace.get_tracer(__name__)
 
+def undo_stuff():
+    time.sleep(1)
+
 def do_stuff():
     time.sleep(2)
+    with tracer.start_as_current_span('child'):
+        undo_stuff()
 
-with tracer.start_as_current_span("foo"):
+with tracer.start_as_current_span('root'):
     do_stuff()

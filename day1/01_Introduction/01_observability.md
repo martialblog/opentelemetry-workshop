@@ -44,6 +44,8 @@ Logs are text-based events that protocol activities over time.
 
 They come in a variety of formats and are either structured (i.e. JSON) or unstructured.
 
+Structure logs aim to create machine-readable data.
+
 !SLIDE smbullets
 
 # Traces

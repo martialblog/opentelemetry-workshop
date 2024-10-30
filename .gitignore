@@ -4,4 +4,6 @@
 *.pdf
 stats/
 static/
+.venv/
+venv/
 *TODO*

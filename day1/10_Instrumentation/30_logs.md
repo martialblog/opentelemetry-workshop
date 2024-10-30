@@ -2,9 +2,9 @@
 
 # ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~ Logs
 
-OpenTelemetry does not define a bespoke API or SDK to create logs.
+OpenTelemetry does not define a API or SDK to create logs, only a data model.
 
-OpenTelemetry’s support for logs is designed to be compatible with what you already have.
+OpenTelemetry's support for logs is designed to be compatible with what you already have.
 
 The `Log Bridge API` can be used by logging library authors to integrade with OpenTelemetry.
 
@@ -57,9 +57,9 @@ Resource and attributes fields of arbitrary value and type
 
 Named top-level fields of specific type and meaning
 
-* Timestamp, Time when the event occurred.
-* SeverityText, The severity text (also known as log level).
-* SeverityNumber, Numerical value of the severity.
-* Body, The body of the log record.
+* Timestamp: time when the event occurred
+* SeverityText: the severity text (also known as log level)
+* SeverityNumber: numerical value of the severity
+* Body: the body of the log record
 
 Existing log formats should be unambiguously mapped to this data model.

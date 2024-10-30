@@ -19,11 +19,18 @@ trace.get_tracer_provider().add_span_processor(
 
 tracer = trace.get_tracer(__name__)
 
-def do_stuff():
+def undo_stuff():
     time.sleep(1)
 
-with tracer.start_as_current_span("root") as root_span:
+def do_stuff():
+    time.sleep(2)
+    with tracer.start_as_current_span('child'):
+        undo_stuff()
+
+with tracer.start_as_current_span('root') as root_span:
     do_stuff()
-    with tracer.start_as_current_span("child") as child_span:
-        child_span.add_event("message", {"foo": "bar"})
+    root_span.add_event('message', {'example event from': 'root'})
+
+    with tracer.start_as_current_span('child') as child_span:
+        child_span.add_event('message', {'another event from': 'child'})
         do_stuff()

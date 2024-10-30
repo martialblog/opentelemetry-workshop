@@ -7,7 +7,7 @@ from opentelemetry.sdk.metrics.export import ConsoleMetricExporter, PeriodicExpo
 
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
-resource = Resource.create({"service.name": "myapp"})
+resource = Resource.create({'service.name': 'myapp'})
 
 exporter = ConsoleMetricExporter()
 reader = PeriodicExportingMetricReader(exporter=exporter, export_interval_millis=10000)
@@ -15,12 +15,14 @@ provider = MeterProvider(metric_readers=[reader], resource=resource)
 
 metrics.set_meter_provider(provider)
 
-mymeter = metrics.get_meter(name="currency.meter")
-inventory_counter = mymeter.create_up_down_counter("gold_pieces_counter")
+mymeter = metrics.get_meter(name='inventory.meter')
+inventory_counter = mymeter.create_up_down_counter('inventory_counter')
 
+# Simple HTTP server to adjust the counter
+# curl localhost:8000/dec
+# url localhost:8000/add
 class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
-        # Let's pretend we're doing some work
         if self.path == '/add':
             self.send_response(200)
             self.end_headers()

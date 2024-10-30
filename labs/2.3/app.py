@@ -9,7 +9,7 @@ from opentelemetry import trace
 from opentelemetry.sdk.trace import TracerProvider
 from opentelemetry.sdk.trace.export import BatchSpanProcessor, ConsoleSpanExporter
 
-resource = Resource.create({"service.name": "roller"})
+resource = Resource.create({'service.name': 'roller'})
 
 exporter = ConsoleSpanExporter()
 processor = BatchSpanProcessor(exporter)
@@ -31,12 +31,12 @@ def parse_dice_type(dice_type):
     """
     Parse dice types (1D20, 2D6, 5D4) into a tuple of dice count and dice type
     """
-    a, f = dice_type.lower().split("d")
+    a, f = dice_type.lower().split('d')
     if not a.isdigit() or not f.isdigit():
-        raise ValueError("Dice parsing error")
+        raise ValueError('Dice parsing error')
     return Dice(int(a), int(f))
 
-@app.route("/roll")
+@app.route('/roll')
 def roll_dice():
     dice_type = request.args.get('dice', default=None, type=str)
     dice = None
@@ -47,3 +47,8 @@ def roll_dice():
 
     result = roll(dice)
     return Response(f"{result}\n", status=200)
+
+# curl "localhost:5000/roll?dice=1d20"
+# curl "localhost:5000/roll?dice=2d4"
+if __name__ == '__main__':
+    app.run(debug=True)

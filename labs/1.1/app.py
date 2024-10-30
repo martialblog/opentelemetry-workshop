@@ -20,11 +20,13 @@ metrics.set_meter_provider(provider)
 # Get a Meter from the MeterProvider
 mymeter = metrics.get_meter(name="dice.meter")
 
+# Create a Counter instrument on the Meter
 roll_counter = mymeter.create_counter(
     "dice.rolls",
     unit="count",
-    description="The number of rolls by roll value"
+    description="Count dice rolls by value"
 )
 
+# Add values to the Counter
 for r in range(1,10):
-    roll_counter.add(1, {"roll.value": random.randint(1, 20)})
+    roll_counter.add(1, {"roll.result": random.randint(1, 6)})
