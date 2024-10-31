@@ -18,7 +18,7 @@ services:
     image: docker.io/prom/prometheus:v3.0.0-beta.1
     volumes:
       - './prometheus.yml:/etc/prometheus/prometheus.yml'
-    command: ["--enable-feature=otlp-write-receiver", "--config.file=/etc/prometheus/prometheus.yml"]
+    command: ["--web.enable-otlp-receiver", "--config.file=/etc/prometheus/prometheus.yml"]
     ports:
       - "9090:9090"
 
