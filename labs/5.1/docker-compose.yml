@@ -37,6 +37,8 @@ services:
     command: ["-config.file=/etc/loki/loki.yml"]
     volumes:
       - './loki.yml:/etc/loki/loki.yml'
+    ports:
+      - "3100:3100"
 
   grafana:
     image: docker.io/grafana/grafana:latest
