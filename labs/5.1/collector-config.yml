@@ -1,5 +1,10 @@
 ---
 receivers:
+  hostmetrics:
+    collection_interval: 30s
+    scrapers:
+      cpu:
+      memory:
   otlp:
     protocols:
       grpc:
@@ -34,7 +39,7 @@ service:
       processors: [batch]
       exporters: [otlp/jaeger]
     metrics:
-      receivers: [otlp]
+      receivers: [hostmetrics, otlp]
       processors: [batch]
       exporters: [otlphttp/prom]
     logs:
