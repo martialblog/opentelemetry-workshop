@@ -22,6 +22,31 @@ See: https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main
 
 !SLIDE
 
+# Processor
+
+Processors take the data collected by receivers and modify or transform it before sending it to the exporters.
+
+This might include filtering, dropping, renaming, or recalculating telemetry.
+
+    @@@Yaml
+    processors:
+      logs:
+        log_record:
+          - 'IsMatch(body, ".*password.*")'
+      memory_limiter:
+        limit_mib: 4000
+      batch:
+    service:
+      pipelines:
+        logs:
+          receivers: [otlp]
+          processors: [memory_limiter, logs, batch]
+          exporters: [otlp]
+
+See: https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/processor
+
+!SLIDE
+
 # Distributions
 
 The OpenTelemetry project provides a compiled distribution of the collector.
