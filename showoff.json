@@ -16,6 +16,8 @@
     {"section": "global/pre/toc"},
     {"section": "global/pre/licence"},
 
-    {"section":"day1/"}
+    {"section":"day1/"},
+
+    {"section": "global/post/01_thanks.md"}
   ]
 }
