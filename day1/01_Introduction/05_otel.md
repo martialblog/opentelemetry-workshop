@@ -36,7 +36,7 @@ OpenTelemetry is developed on a signal by signal basis. Each of which consists o
 * Collector
 * OpenTelemetry Protocol (OTLP)
 
-Components follow a development lifecycle: Draft, Experimental, Stable, Deprecated, Removed.
+Components follow a development life cycle: Draft, Experimental, Stable, Deprecated, Removed.
 
 !SLIDE
 

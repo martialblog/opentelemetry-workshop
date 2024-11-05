@@ -6,7 +6,7 @@ OpenTelemetry does not define a API or SDK to create logs, only a data model.
 
 OpenTelemetry's support for logs is designed to be compatible with what you already have.
 
-The `Log Bridge API` can be used by logging library authors to integrade with OpenTelemetry.
+The `Log Bridge API` can be used by logging library authors to integrate with OpenTelemetry.
 
 It should not be called by you the user.
 
