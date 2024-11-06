@@ -64,3 +64,8 @@ Traces are records of requests flowing through different parts of an application
         Render        :a1, 11:04, 1m
 
 Traces represent the execution path of a request, each span in a trace represents a unit of work during this journey (e.g. API call or database query).
+
+!SLIDE printonly
+# Jaeger Trace Example
+
+<center><img src="../../_images/jaeger-trace-screenshot.png" /></center>
