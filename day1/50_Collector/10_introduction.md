@@ -16,7 +16,7 @@ For most language specific instrumentation libraries you have exporters for popu
 
 The Collector allows the service to offload data quickly and the collector can take care of the rest.
 
-Handling retries, batching, encryption or even sensitive data filtering.
+Handling retries, batching, encryption or even filtering sensitive data.
 
 !SLIDE
 
@@ -34,7 +34,7 @@ https://github.com/open-telemetry/opentelemetry-collector-releases
 
 # Configuration
 
-The structure of any Collector configuration file consists of four classes:
+The structure of any Collector configuration consists of:
 
 * Receivers
 * Processors

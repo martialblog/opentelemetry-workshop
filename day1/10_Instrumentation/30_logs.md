@@ -2,7 +2,7 @@
 
 # ~~~SECTION:MAJOR~~~.~~~SECTION:MINOR~~~ Logs
 
-OpenTelemetry does not define a API or SDK to create logs, only a data model.
+OpenTelemetry does not define an API or SDK to create logs, only a data model.
 
 OpenTelemetry's support for logs is designed to be compatible with what you already have.
 
@@ -45,7 +45,7 @@ Just an example, we don't need to do this manually:
     logging.info('Info only')
     logging.warning('Dangerzone!')
 
-More on zero code instrumentation later.
+More on zero-code instrumentation later.
 
 See: Lab 3.1
 
@@ -53,13 +53,15 @@ See: Lab 3.1
 
 # Log Record
 
-Resource and attributes fields of arbitrary value and type
+The data model:
 
-Named top-level fields of specific type and meaning
-
+* Resource: describes the source of the log
 * Timestamp: time when the event occurred
 * SeverityText: the severity text (also known as log level)
 * SeverityNumber: numerical value of the severity
 * Body: the body of the log record
+* Attributes: additional information about the event
 
-Existing log formats should be unambiguously mapped to this data model.
+Existing log formats should be mapped to this data model.
+
+See: https://opentelemetry.io/docs/specs/otel/logs/data-model/

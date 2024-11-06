@@ -49,9 +49,9 @@ See: https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main
 
 # Distributions
 
-The OpenTelemetry project provides a compiled distribution of the collector.
+The OpenTelemetry project provides compiled distributions of the collector.
 
-But you easily build your own with the build distributions ocb tool (OpenTelemetry Collector Builder).
+But you easily build your own with the `ocb` tool (OpenTelemetry Collector Builder).
 
 When you need custom functionality like authenticator extensions, receivers, processors, exporters or connectors.
 

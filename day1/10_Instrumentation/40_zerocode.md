@@ -1,8 +1,8 @@
 !SLIDE
 
-# Zero Code Instrumentation
+# Zero-Code Instrumentation
 
-The opentelemetry-distro package installs the API, SDK, and the opentelemetry-bootstrap and opentelemetry-instrument tools:
+The `opentelemetry-distro` package installs the API, SDK, and the opentelemetry-bootstrap and opentelemetry-instrument tools:
 
     @@@Sh
     pip install opentelemetry-distro opentelemetry-exporter-otlp
@@ -13,5 +13,7 @@ The opentelemetry-distro package installs the API, SDK, and the opentelemetry-bo
     --logs_exporter console \
     --metrics_exporter console \
     python myapp.py
+
+Zero-code instrumentation depends on the programming language.
 
 See: Lab 3.2

@@ -12,7 +12,7 @@ The components that we use in our code:
 
 # Manual Trace Instrumentation
 
-Simple example for a Python instrument:
+Simple example for a Python tracer:
 
     @@@Python
     tracer = trace.get_tracer("mytracer")

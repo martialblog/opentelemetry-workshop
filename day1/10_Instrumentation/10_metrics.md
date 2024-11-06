@@ -50,7 +50,7 @@ See: Lab 1.3
 These are periodically invoke a callback function to collect measurements.
 
 * `ObservableCounter`, reports monotonically increasing values when the instrument is being observed
-* `ObservableUpDownCounter`, additive values when the instrument is being observed
+* `ObservableUpDownCounter`, additive values when the instrument is being observed (also negative)
 * `Asynchronous Gauge`, reports non-additive values when the instrument is being observed (e.g. a temperature)
 
 See: Lab 1.4
@@ -61,7 +61,7 @@ See: Lab 1.4
 
 Aggregations are the means by which metric events are processed. Example: SumAggregation, LastValueAggregation, ExplicitBucketHistogramAggregation
 
-The OpenTelemetry API provides a default aggregation for each instrument which can be overridden using a View.
+The OpenTelemetry API provides a default aggregation for each instrument, which can be overridden by a View.
 
     @@@Python
     view = View(
@@ -75,9 +75,9 @@ The OpenTelemetry API provides a default aggregation for each instrument which c
 
 # Exporters
 
-Exporters are responsible to send the collected data elsewhere:
+Exporters are responsible for sending the collected data elsewhere:
 
-* ConsoleMetricExporter: used to write debug messages to the console
+* ConsoleMetricExporter: write debug messages to the console
 * OTLPMetricExporter: push metrics to any device that understands the OpenTelemetry protocol
 * Prometheus Metric Exporter: pull-based exporter that Prometheus clients can scrape
 * Prometheus Remote Write Exporter: push-based exporter for the Prometheus remote write protocol
