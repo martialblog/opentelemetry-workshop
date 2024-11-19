@@ -13,5 +13,5 @@ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
 Examples:
 
 ```
-opentelemetry-instrument --traces_exporter=console --metrics_exporter=console --logs_exporter=console --service_name=todoapp python app.py
+opentelemetry-instrument --traces_exporter=console --metrics_exporter=console --logs_exporter=console --service_name=myapp flask run
 ```

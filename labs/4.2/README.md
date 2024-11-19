@@ -17,11 +17,11 @@ export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
 Examples:
 
 ```
-opentelemetry-instrument --traces_exporter=None --metrics_exporter=None --logs_exporter=None --service_name=todoapp python app.py
+opentelemetry-instrument --traces_exporter=None --metrics_exporter=None --logs_exporter=None --service_name=todoapp flask run
 
-opentelemetry-instrument --traces_exporter=None --metrics_exporter=None --logs_exporter=console --service_name=todoapp python app.py
+opentelemetry-instrument --traces_exporter=None --metrics_exporter=None --logs_exporter=console --service_name=todoapp flask run
 
-opentelemetry-instrument --traces_exporter=console --metrics_exporter=console --logs_exporter=console --service_name=todoapp python app.py
+opentelemetry-instrument --traces_exporter=console --metrics_exporter=console --logs_exporter=console --service_name=todoapp python flask run
 
-opentelemetry-instrument --traces_exporter=otlp --metrics_exporter=otlp --logs_exporter=otlp --service_name=todoist python app.py
+opentelemetry-instrument --traces_exporter=otlp --metrics_exporter=otlp --logs_exporter=otlp --service_name=todoist flask run
 ```

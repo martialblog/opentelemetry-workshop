@@ -12,6 +12,23 @@ It should not be called by you the user.
 
 !SLIDE
 
+# Log Record
+
+The data model:
+
+* Resource: describes the source of the log
+* Timestamp: time when the event occurred
+* SeverityText: the severity text (also known as log level)
+* SeverityNumber: numerical value of the severity
+* Body: the body of the log record
+* Attributes: additional information about the event
+
+Existing log formats should be mapped to this data model.
+
+See: https://opentelemetry.io/docs/specs/otel/logs/data-model/
+
+!SLIDE
+
 # Auto Instrumentation
 
 Depending on the logging library you are using:
@@ -45,23 +62,4 @@ Just an example, we don't need to do this manually:
     logging.info('Info only')
     logging.warning('Dangerzone!')
 
-More on zero-code instrumentation later.
-
 See: Lab 3.1
-
-!SLIDE
-
-# Log Record
-
-The data model:
-
-* Resource: describes the source of the log
-* Timestamp: time when the event occurred
-* SeverityText: the severity text (also known as log level)
-* SeverityNumber: numerical value of the severity
-* Body: the body of the log record
-* Attributes: additional information about the event
-
-Existing log formats should be mapped to this data model.
-
-See: https://opentelemetry.io/docs/specs/otel/logs/data-model/

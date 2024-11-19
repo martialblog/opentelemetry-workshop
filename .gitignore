@@ -6,4 +6,5 @@ stats/
 static/
 .venv/
 venv/
+__pycache__/
 *TODO*
